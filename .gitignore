@@ -1,5 +1,4 @@
 .idea/
-.gradle
-.kotlin
-build
-gradle/wrapper
+.gradle/
+.kotlin/
+build/

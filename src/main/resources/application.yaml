@@ -3,4 +3,4 @@ ktor:
     port: 8080
   application:
     modules:
-      - server.controller.TestRouteKt.configureRouting
+      - server.controller.SafariRoutingKt.configureRouting

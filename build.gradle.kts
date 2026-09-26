@@ -27,6 +27,7 @@ dependencies {
     implementation(libs.koin.loggerSlf4j)
     implementation(libs.logback.classic)
     implementation(libs.postgresql)
+    implementation(ktorLibs.server.resources)
 
     testImplementation(kotlin("test"))
     testImplementation(ktorLibs.server.testHost)

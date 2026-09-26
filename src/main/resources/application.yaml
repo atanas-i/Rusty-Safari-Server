@@ -3,5 +3,5 @@ ktor:
     port: 8080
   application:
     modules:
+      - server.plugins.ResourcesKt.configureResources
       - server.controller.SafariRoutingKt.configureRouting
-      - server.controller.ResourcesKt.configureResources

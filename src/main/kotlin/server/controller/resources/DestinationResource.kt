@@ -6,5 +6,5 @@ import javax.print.attribute.standard.Destination
 @Resource("/destinations")
 class Destinations {
     @Resource("/{id}")
-    class Id(val parent: Destinations = Destinations(), val id: Long)
+    class Id(val parent: Destinations = Destinations(), val id: String)
 }

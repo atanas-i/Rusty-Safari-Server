@@ -4,4 +4,5 @@ ktor:
   application:
     modules:
       - server.plugins.ResourcesKt.configureResources
+      - server.plugins.ContentNegotiationKt.configureContentNegotiation
       - server.controller.SafariRoutingKt.configureRouting

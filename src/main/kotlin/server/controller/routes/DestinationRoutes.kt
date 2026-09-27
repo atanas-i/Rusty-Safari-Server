@@ -1,10 +1,9 @@
 package server.controller.routes
 
-import domain.destination.DestinationService
+import domain.destination.service.DestinationService
 import domain.destination.dtos.Destination
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.request.receive
-import io.ktor.server.request.uri
 import io.ktor.server.resources.delete
 import io.ktor.server.resources.get
 import io.ktor.server.resources.post

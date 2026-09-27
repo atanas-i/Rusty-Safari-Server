@@ -1,8 +1,8 @@
-package domain.destination
+package domain.destination.repository
 
 import domain.destination.dtos.Destination
 
-interface DestinationService {
+interface DestinationRepository {
     suspend fun createDestination(destination: Destination)
     suspend fun updateDestination(destination: Destination)
     suspend fun deleteDestination(destinationId: String): Boolean

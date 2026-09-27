@@ -1,26 +1,28 @@
-package domain.destination
+package domain.destination.repository
 
-import data.destinationStorage
 import domain.destination.dtos.Destination
+import domain.destination.service.DestinationService
 
-class ImpDestinationService : DestinationService {
+class ImplDestinationRepository(
+    private val service: DestinationService
+) : DestinationRepository {
     override suspend fun createDestination(destination: Destination) {
-        destinationStorage.add(destination)
+        service.createDestination(destination)
     }
 
     override suspend fun updateDestination(destination: Destination) {
-        TODO("Not yet implemented")
+        service.updateDestination(destination)
     }
 
     override suspend fun deleteDestination(destinationId: String): Boolean {
-       return destinationStorage.removeIf { it.id == destinationId }
+        return service.deleteDestination(destinationId)
     }
 
     override suspend fun getDestination(destinationId: String): Destination? {
-        return destinationStorage.find { it.id == destinationId }
+        return service.getDestination(destinationId)
     }
 
     override suspend fun getDestinations(): List<Destination> {
-        return destinationStorage.toList()
+        return service.getDestinations()
     }
 }
